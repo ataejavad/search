@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ایجنت‌های زندگی</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="vendor/d3.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🧭 ایجنت‌های زندگی</h1>
+    <div class="header-stats" id="stats"></div>
+    <button id="fit" class="ghost" title="نمایش کامل درخت">⤢ کل درخت</button>
+  </header>
+
+  <main>
+    <section id="tree-wrap">
+      <svg id="tree"></svg>
+      <div class="legend">
+        <span><i class="dot idle"></i>آماده</span>
+        <span><i class="dot running"></i>در حال کار</span>
+        <span><i class="dot waiting"></i>منتظر تأیید</span>
+        <span><i class="dot error"></i>خطا</span>
+      </div>
+    </section>
+
+    <aside id="panel">
+      <div class="empty">یک ایجنت را در نمودار انتخاب کنید.</div>
+    </aside>
+  </main>
+
+  <div id="approvals"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
