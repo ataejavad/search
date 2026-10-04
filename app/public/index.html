@@ -12,23 +12,45 @@
 <body>
   <header>
     <h1>🧭 ایجنت‌های زندگی</h1>
-    <div class="header-stats" id="stats"></div>
-    <button id="fit" class="ghost" title="نمایش کامل درخت">⤢ کل درخت</button>
+    <form id="capture" title="هر فکری در ذهن دارید بنویسید؛ ستاد آن را مرتب می‌کند و به ایجنت درست می‌سپارد.">
+      <input type="text" name="text" placeholder="چه چیزی در ذهنت است؟ بنویس تا مرتبش کنم…" autocomplete="off" />
+      <button class="primary">ثبت</button>
+    </form>
   </header>
 
+  <nav class="toolbar">
+    <div class="views">
+      <button data-view="tree" class="active">🌳 درخت</button>
+      <button data-view="board">📋 کارها</button>
+      <button data-view="me">🪞 شناخت من</button>
+    </div>
+    <div class="toolbar-actions">
+      <button id="new-agent">+ ایجنت</button>
+      <button id="new-group">+ گروه</button>
+      <label class="toggle"><input type="checkbox" id="show-archived" /> بایگانی‌ها</label>
+      <button id="fit" class="ghost" title="نمایش کامل درخت">⤢</button>
+    </div>
+    <div class="header-stats" id="stats"></div>
+  </nav>
+
   <main>
-    <section id="tree-wrap">
-      <svg id="tree"></svg>
-      <div class="legend">
-        <span><i class="dot idle"></i>آماده</span>
-        <span><i class="dot running"></i>در حال کار</span>
-        <span><i class="dot waiting"></i>منتظر تأیید</span>
-        <span><i class="dot error"></i>خطا</span>
+    <section id="views">
+      <div id="view-tree" class="view">
+        <svg id="tree"></svg>
+        <div class="legend">
+          <span><i class="dot idle"></i>آماده</span>
+          <span><i class="dot running"></i>در حال کار</span>
+          <span><i class="dot waiting"></i>منتظر تأیید</span>
+          <span><i class="dot error"></i>خطا</span>
+          <span><i class="dash"></i>عضو گروه</span>
+        </div>
       </div>
+      <div id="view-board" class="view" hidden></div>
+      <div id="view-me" class="view" hidden></div>
     </section>
 
     <aside id="panel">
-      <div class="empty">یک ایجنت را در نمودار انتخاب کنید.</div>
+      <div class="empty">یک ایجنت یا گروه را انتخاب کنید.</div>
     </aside>
   </main>
 

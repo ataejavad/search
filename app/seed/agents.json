@@ -9,9 +9,20 @@
       "prompt": "تو ستاد مرکزی زندگی من هستی. وظیفه‌ات این است که هر درخواست را بفهمی، آن را به ایجنت مناسب (زیرمجموعه‌هایت) بسپاری، و نتیجه‌ها را یکپارچه و کوتاه به فارسی گزارش کنی. اگر کاری به چند بخش مربوط است، آن را بین چند ایجنت تقسیم کن.",
       "model": "claude-opus-5-5",
       "permission": "ask",
-      "tools": ["Read", "Write", "Edit", "Glob", "Grep", "WebSearch", "WebFetch", "Agent"],
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "WebSearch",
+        "WebFetch",
+        "Agent"
+      ],
       "mcpServers": {},
-      "tasks": []
+      "tasks": [],
+      "kind": "agent",
+      "archived": false
     },
     {
       "id": "finance",
@@ -22,9 +33,18 @@
       "prompt": "تو مسئول امور مالی من هستی: ثبت و دسته‌بندی هزینه‌ها، بودجه‌ی ماهانه، هدف‌های پس‌انداز. داده‌ها را در پوشه‌ی finance/ نگه دار.",
       "model": "claude-opus-5-5",
       "permission": "ask",
-      "tools": ["Read", "Write", "Edit", "Glob", "Grep", "WebSearch"],
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "WebSearch"
+      ],
       "mcpServers": {},
-      "tasks": []
+      "tasks": [],
+      "kind": "agent",
+      "archived": false
     },
     {
       "id": "health",
@@ -35,9 +55,18 @@
       "prompt": "تو مسئول سلامت من هستی: برنامه‌ی ورزش، خواب و تغذیه، یادآوری چکاپ‌ها. داده‌ها را در پوشه‌ی health/ نگه دار. توصیه‌ی پزشکی قطعی نده و موارد جدی را به پزشک ارجاع بده.",
       "model": "claude-opus-5-5",
       "permission": "ask",
-      "tools": ["Read", "Write", "Edit", "Glob", "Grep", "WebSearch"],
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "WebSearch"
+      ],
       "mcpServers": {},
-      "tasks": []
+      "tasks": [],
+      "kind": "agent",
+      "archived": false
     },
     {
       "id": "work",
@@ -48,9 +77,20 @@
       "prompt": "تو مسئول کار و مسیر شغلی من هستی: پیگیری پروژه‌ها، اولویت‌بندی کارها و هدف‌های شغلی. داده‌ها را در پوشه‌ی work/ نگه دار.",
       "model": "claude-opus-5-5",
       "permission": "ask",
-      "tools": ["Read", "Write", "Edit", "Glob", "Grep", "WebSearch", "WebFetch", "Agent"],
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "WebSearch",
+        "WebFetch",
+        "Agent"
+      ],
       "mcpServers": {},
-      "tasks": []
+      "tasks": [],
+      "kind": "agent",
+      "archived": false
     },
     {
       "id": "inbox",
@@ -61,9 +101,15 @@
       "prompt": "تو مسئول ایمیل و تقویم من هستی. ایمیل‌های مهم را خلاصه کن و جلسات را مرتب کن. هیچ ایمیلی را بدون تأیید من ارسال نکن.",
       "model": "claude-opus-5-5",
       "permission": "ask",
-      "tools": ["Read", "Write", "Glob"],
+      "tools": [
+        "Read",
+        "Write",
+        "Glob"
+      ],
       "mcpServers": {},
-      "tasks": []
+      "tasks": [],
+      "kind": "agent",
+      "archived": false
     },
     {
       "id": "learning",
@@ -74,9 +120,19 @@
       "prompt": "تو مسئول یادگیری من هستی: برنامه‌ی مطالعه، خلاصه‌ی کتاب و دوره، پیشنهاد منابع. داده‌ها را در پوشه‌ی learning/ نگه دار.",
       "model": "claude-opus-5-5",
       "permission": "ask",
-      "tools": ["Read", "Write", "Edit", "Glob", "Grep", "WebSearch", "WebFetch"],
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "WebSearch",
+        "WebFetch"
+      ],
       "mcpServers": {},
-      "tasks": []
+      "tasks": [],
+      "kind": "agent",
+      "archived": false
     },
     {
       "id": "home",
@@ -87,8 +143,42 @@
       "prompt": "تو مسئول خانه و روابط من هستی: فهرست خرید، کارهای خانه، تولدها و مناسبت‌ها. داده‌ها را در پوشه‌ی home/ نگه دار.",
       "model": "claude-opus-5-5",
       "permission": "ask",
-      "tools": ["Read", "Write", "Edit", "Glob", "Grep", "WebSearch"],
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "WebSearch"
+      ],
       "mcpServers": {},
+      "tasks": [],
+      "kind": "agent",
+      "archived": false
+    },
+    {
+      "id": "weekly",
+      "kind": "group",
+      "parent": null,
+      "archived": false,
+      "name": "برنامه‌ریزی هفتگی",
+      "icon": "🗓️",
+      "description": "مرور هفته و چیدن برنامه‌ی هفته‌ی بعد با کمک سلامت، کار و مالی.",
+      "prompt": "تو هماهنگ‌کننده‌ی گروه برنامه‌ریزی هفتگی هستی. از هر عضو وضعیت و اولویت‌های بخش خودش را بگیر، تداخل‌ها را حل کن و یک برنامه‌ی هفتگی کوتاه، واقع‌بینانه و مرتب بساز.",
+      "model": "claude-opus-5-5",
+      "permission": "ask",
+      "tools": [
+        "Read",
+        "Glob",
+        "Grep",
+        "Write"
+      ],
+      "mcpServers": {},
+      "members": [
+        "health",
+        "work",
+        "finance"
+      ],
       "tasks": []
     }
   ]
